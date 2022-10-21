@@ -7,7 +7,7 @@ public class Homework {
     public static void main(String[] args) {
         int rightAnswersCount = 0;
         int wrongAnswersCount = 0;
-        String[] questions = {"Кем разрабатывался язык Java?", "\n\nЧему равно ускорение свободного падения?", "\n\nЧто такое десница?"};
+        String[] questions = {"Кем разрабатывался язык Java?", "\nЧему равно ускорение свободного падения?", "\nЧто такое десница?"};
         String[][] answers = {{"A: Джеймс Гослинг", "B: Ди Каприо", "C: Архимед", "D: Железный Человек"}, {"A: 15", "B: 9,8", "C: 5", "D: 25"}, {"A: Рука", "B: Нога", "C: Бровь", "D: Глаз"}};
         String[] rightAnswers = {"A", "B", "A"};
 
@@ -32,6 +32,7 @@ public class Homework {
     public static String choice() {
         answer = scanner.next();
         while (!answer.equalsIgnoreCase("A") && !answer.equalsIgnoreCase("B") && !answer.equalsIgnoreCase("C") && !answer.equalsIgnoreCase("D")) {
+            System.out.println("Нужно выбрать из вариантов \"A\" \"B\" \"C\" или \"D\"");
             answer = scanner.next();
         }
         return answer;
