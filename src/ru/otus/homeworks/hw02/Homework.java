@@ -1,6 +1,20 @@
 package ru.otus.homeworks.hw02;
 import java.util.Scanner;
-
+/* ПОДНАТАСКАТЬ
+Задание на усложнение:
+1. Все в один массив
+2. Чтобы были цифры вместо букв
+3. Разное количество вариантов ответа
+4. Массив с разным типом данных
+5. OK / Второй фор с j
+6. Массив с увеличением элементов вне этой домашки
+7. OK / Задания в лс отус
+P.S.
+Первый цикл на while Второй на форич (в следующий раз)
+Для себя:
+1.pull-request чз IDEA
+2. пересмотреть два последних урока
+ */
 public class Homework {
     static String answer;
     static Scanner scanner = new Scanner(System.in);
@@ -14,8 +28,8 @@ public class Homework {
         System.out.println("Вам необходимо сдать тест, в котором 3 вопроса.\nВ каждом вопросе 4 варианта ответа и лишь один из них верный.\n");
         for (int i = 0; i < questions.length; i++) {
             System.out.println(questions[i] + "\nВарианты ответов:");
-            for (int t = 0; t < answers[i].length; t++) {
-                System.out.print(answers[i][t] + "\n");
+            for (int j = 0; j < answers[i].length; j++) {
+                System.out.print(answers[i][j] + "\n");
             }
             System.out.println("Ваш ответ:");
             answer = choice();
