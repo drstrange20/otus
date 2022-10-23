@@ -2,18 +2,19 @@ package ru.otus.homeworks.hw02;
 
 import java.util.Scanner;
 
-/* ПОДНАТАСКАТЬ
+/* 1. ПОДНАТАСКАТЬ
+   2. ДАТЬ КОММЕНТАРИЙ НА МЕТОД chooseAnOption
+
 Задание на усложнение:
-1. ОК / Все в один массив
-2. ОК / Чтобы были цифры вместо букв
-3. ОК / Разное количество вариантов ответа
-4. ОК / Массив с разным типом данных
-5. OK / Второй фор с j
-6. Массив с увеличением элементов вне этой домашки
-7. OK / Задания в лс отус
-8. ОК / Первый цикл на while Второй на форич
+1. ОК - Все в один массив
+2. ОК - Чтобы были цифры вместо букв
+3. ОК - Разное количество вариантов ответа
+4. ОК - Массив с разным типом данных
+5. OK - Массив с увеличением элементов вне этой домашки
+7. OK - 4 Exercises
+8. ОК - Первый цикл на while Второй на форич
  */
-public class Homework {
+public class Test {
     static int answer;
     static String answerNumber;
     static Scanner scanner = new Scanner(System.in);
@@ -30,7 +31,7 @@ public class Homework {
         int wrongAnswersCount = 0;
         int rightAnswersCount = 0;
 
-        System.out.println("Вам необходимо сдать тест, в котором " + questionsAndAnswers[0].length + " вопроса.\n");
+        System.out.println("Вам необходимо сдать тест, в котором 3 вопроса.\n");
         while (counter < questionsAndAnswers[0].length) {
             System.out.println(questionsAndAnswers[0][counter] + "\nВарианты ответов:");
             counter++;
@@ -57,15 +58,14 @@ public class Homework {
         while (true) {
             try {
                 answer = Integer.parseInt(scanner.nextLine().trim());
+                while (answer < 1 || answer > questionsAndAnswers[counter].length) {
+                    System.out.println("Введите вариант ответа от 1 до " + questionsAndAnswers[counter].length);
+                    answer = Integer.parseInt(scanner.nextLine().trim());
+                }
                 break;
             } catch (NumberFormatException e) {
                 System.out.println("Выберите вариант ответа от 1 до " + questionsAndAnswers[counter].length);
             }
-        }
-
-        while (answer < 1 || answer > questionsAndAnswers[counter].length) {
-            System.out.println("Введите вариант ответа от 1 до " + questionsAndAnswers[counter].length);
-            answer = scanner.nextInt();
         }
         return answer;
     }
