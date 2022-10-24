@@ -13,8 +13,10 @@ public class Exercise04 {
         System.out.println(str.name);
     }
 }
+
 class Human {
     String name;
+
     public Human(String name) {
         this.name = name;
     }
