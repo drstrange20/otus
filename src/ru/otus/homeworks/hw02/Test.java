@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 /* 1. ПОДНАТАСКАТЬ
    2. ДАТЬ КОММЕНТАРИИ на код.
+   3. DynamicArray?
 
 Задание на усложнение:
 1. ОК - Все в один массив
@@ -19,13 +20,14 @@ public class Test {
     static int counter = 0;
 
     public static void main(String[] args) {
-        final String[][] QUESTIONS_AND_ANSWERS = {
+        final Object[][] QUESTIONS_AND_ANSWERS = {
                 {"Кем разрабатывался язык Java?", "\nЧему равно ускорение свободного падения?", "\nЧто такое десница?"},
                 {"1 Джеймс Гослинг", "2 Ди Каприо", "3 Архимед", "4 Железный Человек"},
                 {"1 15", "2 9,8", "3 5"},
                 {"1 Рука", "2 Нога", "3 Бровь", "4 Глаз", "5 Голова"},
-                {String.valueOf(1), String.valueOf(2), String.valueOf(1)}
+                {1, 2, 1}
         };
+
         int wrongAnswersCount = 0;
         int rightAnswersCount = 0;
 
@@ -33,14 +35,14 @@ public class Test {
         while (counter < QUESTIONS_AND_ANSWERS[0].length) {
             System.out.println(QUESTIONS_AND_ANSWERS[0][counter] + "\nВарианты ответов:");
             counter++;
-            for (String arr : QUESTIONS_AND_ANSWERS[counter]) {
+            for (Object arr : QUESTIONS_AND_ANSWERS[counter]) {
                 System.out.print(arr + "\n");
             }
             System.out.println("Ваш ответ:");
             answer = chooseAnOption(QUESTIONS_AND_ANSWERS);
             counter--;
-            String answerNumber = String.valueOf(answer);
-            if (answerNumber.equals(QUESTIONS_AND_ANSWERS[4][counter])) {
+
+            if (QUESTIONS_AND_ANSWERS[4][counter].equals(answer)) {
                 System.out.println("Верно");
                 rightAnswersCount++;
             } else {
@@ -52,7 +54,7 @@ public class Test {
         System.out.println("Количество верных ответов:" + rightAnswersCount + "\nКоличество неверных ответов:" + wrongAnswersCount);
     }
 
-    public static int chooseAnOption(String[][] questionsAndAnswers) {
+    public static int chooseAnOption(Object[][] questionsAndAnswers) {
         Scanner scanner = new Scanner(System.in);
         while (true) {
             try {
