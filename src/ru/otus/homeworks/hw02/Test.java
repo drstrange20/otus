@@ -1,11 +1,8 @@
 package ru.otus.homeworks.hw02;
-
 import java.util.Scanner;
 
 /* 1. ПОДНАТАСКАТЬ
-   2. ДАТЬ КОММЕНТАРИИ на код.
-   3. DynamicArray?
-
+   2. DynamicArray?
 Задание на усложнение:
 1. ОК - Все в один массив
 2. ОК - Чтобы были цифры вместо букв
@@ -27,14 +24,15 @@ public class Test {
                 {"1 Рука", "2 Нога", "3 Бровь", "4 Глаз", "5 Голова"},
                 {1, 2, 1}
         };
-
         int wrongAnswersCount = 0;
         int rightAnswersCount = 0;
 
         System.out.println("Вам необходимо сдать тест, в котором 3 вопроса.\n");
+
         while (counter < QUESTIONS_AND_ANSWERS[0].length) {
             System.out.println(QUESTIONS_AND_ANSWERS[0][counter] + "\nВарианты ответов:");
             counter++;
+
             for (Object arr : QUESTIONS_AND_ANSWERS[counter]) {
                 System.out.print(arr + "\n");
             }
