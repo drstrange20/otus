@@ -2,7 +2,6 @@ package ru.otus.homeworks.hw02;
 import java.util.Scanner;
 
 /* 1. ПОДНАТАСКАТЬ
-   2. DynamicArray?
 Задание на усложнение:
 1. ОК - Все в один массив
 2. ОК - Чтобы были цифры вместо букв
@@ -52,18 +51,17 @@ public class Test {
         System.out.println("Количество верных ответов:" + rightAnswersCount + "\nКоличество неверных ответов:" + wrongAnswersCount);
     }
 
-    public static int chooseAnOption(Object[][] questionsAndAnswers) {
+    public static int chooseAnOption(Object[][] QUESTIONS_AND_ANSWERS) {
         Scanner scanner = new Scanner(System.in);
         while (true) {
             try {
                 answer = Integer.parseInt(scanner.nextLine().trim());
-                while (answer < 1 || answer > questionsAndAnswers[counter].length) {
-                    System.out.println("Введите вариант ответа от 1 до " + questionsAndAnswers[counter].length);
-                    answer = Integer.parseInt(scanner.nextLine().trim());
+                while (answer < 1 || answer > QUESTIONS_AND_ANSWERS[counter].length) {
+                    System.out.println("Выберите вариант ответа от 1 до " + QUESTIONS_AND_ANSWERS[counter].length);
                 }
                 break;
             } catch (NumberFormatException e) {
-                System.out.println("Выберите вариант ответа от 1 до " + questionsAndAnswers[counter].length);
+                System.out.println("Выберите вариант ответа от 1 до " + QUESTIONS_AND_ANSWERS[counter].length);
             }
         }
         return answer;
