@@ -16,9 +16,11 @@ public class Exercise04 {
 
 class Human {
     String name;
+
     Human(String name) {
         this.name = name;
     }
+
     @Override
     public String toString() {
         return name;

@@ -1,16 +1,6 @@
 package ru.otus.homeworks.hw02;
 import java.util.Scanner;
 
-/* 1. ПОДНАТАСКАТЬ
-Задание на усложнение:
-1. ОК - Все в один массив
-2. ОК - Чтобы были цифры вместо букв
-3. ОК - Разное количество вариантов ответа
-4. ОК - Массив с разным типом данных
-5. OK - Массив с увеличением элементов вне этой домашки
-7. OK - 4 Exercises
-8. ОК - Первый цикл на while, второй на for each
- */
 public class Test {
     static int answer;
     static int counter = 0;
