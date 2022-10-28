@@ -46,6 +46,7 @@ class Test {
                 answer = Integer.parseInt(scanner.nextLine().trim());
                 while (answer < 1 || answer > QUESTIONS_AND_ANSWERS[counter].length) {
                     System.out.println("Выберите вариант ответа от 1 до " + QUESTIONS_AND_ANSWERS[counter].length);
+                    answer = Integer.parseInt(scanner.nextLine().trim());
                 }
                 break;
             } catch (NumberFormatException e) {
