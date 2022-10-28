@@ -1,11 +1,11 @@
-Class Test
+Class Exam
 	counter
 	wrongAnswersCount
 	rightAnswersCount
 		doTestAgain();
 
 
-Class QuestionsAndAnswers
+Class Test
 	Object[][](questions, answers, rightAnswers)
 		startTesting();
 		chooseAnOption();
