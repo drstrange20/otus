@@ -1,0 +1,17 @@
+Class Test
+	counter
+	wrongAnswersCount
+	rightAnswersCount
+		doTestAgain();
+
+
+Class QuestionsAndAnswers
+	Object[][](questions, answers, rightAnswers)
+		startTesting();
+		chooseAnOption();
+
+	
+Class Student
+	name
+	answerOption
+		verifyStudentsName();
