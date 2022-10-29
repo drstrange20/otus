@@ -1,16 +1,15 @@
 Class Exam
+    private int rightAnswersCount;
+    private int wrongAnswersCount;
 
 
 Class Test
 	Object[][]
-	counter
-	wrongAnswersCount
-	rightAnswersCount
+	static int counter;
 		startTesting();
 		chooseAnOption();
 
 	
 Class Student
-	name
-	answer
-		verifyStudentsName();
+    private String name;
+    static int answer;
