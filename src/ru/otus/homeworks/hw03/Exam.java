@@ -7,8 +7,8 @@ import java.util.Scanner;
 // дженерики
 // Linked list
 public class Exam {
-    int rightAnswersCount;
-    int wrongAnswersCount;
+    private int rightAnswersCount;
+    private int wrongAnswersCount;
 
     public Exam(int rightAnswersCount, int wrongAnswersCount) {
         this.rightAnswersCount = rightAnswersCount;
@@ -34,5 +34,4 @@ public class Exam {
         Exam exam = test.startTesting();
         System.out.println("Количество верных ответов:" + exam.getRightAnswersCount() + "\nКоличество неверных ответов:" + exam.getWrongAnswersCount());
     }
-
 }
