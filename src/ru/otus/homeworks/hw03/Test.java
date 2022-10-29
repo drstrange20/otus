@@ -3,7 +3,7 @@ package ru.otus.homeworks.hw03;
 import java.util.Scanner;
 
 class Test {
-    final Object[][] QUESTIONS_AND_ANSWERS_ARRAY = {
+    static final Object[][] QUESTIONS_AND_ANSWERS_ARRAY = {
             {"Кем разрабатывался язык Java?", "\nЧему равно ускорение свободного падения?", "\nЧто такое десница?"},
             {"1 Джеймс Гослинг", "2 Ди Каприо", "3 Архимед", "4 Железный Человек"},
             {"1 15", "2 9,8", "3 5"},
@@ -11,8 +11,8 @@ class Test {
             {1, 2, 1}
     };
     static int counter = 0;
-    static int answer;
-    static Scanner scanner = new Scanner(System.in);
+//    static int answer;
+    Scanner scanner = new Scanner(System.in);
     Exam startTesting() {
         int rightAnswersCount = 0;
         int wrongAnswersCount = 0;
@@ -24,10 +24,10 @@ class Test {
                 System.out.print(arr + "\n");
             }
             System.out.println("Ваш ответ:");
-            answer = chooseAnOption(QUESTIONS_AND_ANSWERS_ARRAY);
+            Student.answer = chooseAnOption(QUESTIONS_AND_ANSWERS_ARRAY);
             counter--;
 
-            if (QUESTIONS_AND_ANSWERS_ARRAY[4][counter].equals(answer)) {
+            if (QUESTIONS_AND_ANSWERS_ARRAY[4][counter].equals(Student.answer)) {
                 System.out.println("Верно");
                 rightAnswersCount++;
             } else {
@@ -40,19 +40,19 @@ class Test {
     }
 
 
-    public static int chooseAnOption(Object[][] QUESTIONS_AND_ANSWERS) {
+    public int chooseAnOption(Object[][] QUESTIONS_AND_ANSWERS) {
         while (true) {
             try {
-                answer = Integer.parseInt(scanner.nextLine().trim());
-                while (answer < 1 || answer > QUESTIONS_AND_ANSWERS[counter].length) {
+                Student.answer = Integer.parseInt(scanner.nextLine().trim());
+                while (Student.answer < 1 || Student.answer > QUESTIONS_AND_ANSWERS[counter].length) {
                     System.out.println("Выберите вариант ответа от 1 до " + QUESTIONS_AND_ANSWERS[counter].length);
-                    answer = Integer.parseInt(scanner.nextLine().trim());
+                    Student.answer = Integer.parseInt(scanner.nextLine().trim());
                 }
                 break;
             } catch (NumberFormatException e) {
                 System.out.println("Выберите вариант ответа от 1 до " + QUESTIONS_AND_ANSWERS[counter].length);
             }
         }
-        return answer;
+        return Student.answer;
     }
 }

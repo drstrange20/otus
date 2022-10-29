@@ -1,21 +1,18 @@
 package ru.otus.homeworks.hw03;
 
 
-import static ru.otus.homeworks.hw03.Test.scanner;
-
-
 class Student {
-    private static String name;
+    private String name;
+    static int answer;
 
-    public static void setName() {
-        while (!scanner.hasNext("[А-Яа-я]+")) {
-            System.out.println("Вы ввели некорректное имя");
-            scanner.next();
-        }
-        //здесь
+    public Student(String name) {
+
+        this.name = name;
     }
 
-    public static String getName() {
+
+    public String getName() {
+
         return name;
     }
 }

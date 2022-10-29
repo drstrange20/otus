@@ -1,17 +1,16 @@
 Class Exam
-	counter
-	wrongAnswersCount
-	rightAnswersCount
-		doTestAgain();
 
 
 Class Test
-	Object[][](questions, answers, rightAnswers)
+	Object[][]
+	counter
+	wrongAnswersCount
+	rightAnswersCount
 		startTesting();
 		chooseAnOption();
 
 	
 Class Student
 	name
-	answerOption
+	answer
 		verifyStudentsName();
