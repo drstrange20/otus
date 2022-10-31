@@ -1,8 +1,13 @@
 package ru.otus.homeworks.hw03;
 
 class Student {
-    private String name;
-    static int answer;
+    private final String name;
+
+    public void setAnswer(int answer) {
+        this.answer = answer;
+    }
+
+    int answer;
 
     public Student(String name) {
 
