@@ -5,7 +5,7 @@ import java.util.Scanner;
 class Test {
     static int counter;
 
-    static Exam startTesting(Object[][] test1, Student student) {
+    static Exam startTesting(Object[][] test1, Student student, Scanner scanner) {
         int rightAnswersCount = 0;
         int wrongAnswersCount = 0;
         while (counter < test1[0].length) {
@@ -16,7 +16,7 @@ class Test {
                 System.out.print(arr + "\n");
             }
             System.out.println("Ваш ответ:");
-            int answer = chooseAnOption(test1);
+            int answer = chooseAnOption(test1, scanner);
             student.setAnswer(answer);
             counter--;
 
@@ -32,8 +32,7 @@ class Test {
         return new Exam(rightAnswersCount, wrongAnswersCount);
     }
 
-    public static int chooseAnOption(Object[][] test1) {
-        Scanner scanner = new Scanner(System.in);
+    public static int chooseAnOption(Object[][] test1, Scanner scanner) {
         int answer;
         while (true) {
             try {
