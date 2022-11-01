@@ -2,19 +2,15 @@ package ru.otus.homeworks.hw03;
 
 
 public class RightAnswers {
-    int rightOption;
+    int rightAnswers;
 
     @Override
     public boolean equals(Object obj) {
         Student student = (Student) obj;
-        return this.rightOption == student.answer;
+        return this.rightAnswers == student.answer;
     }
 
-    public RightAnswers(int rightOption) {
-        this.rightOption = rightOption;
+    public RightAnswers(int rightAnswers) {
+        this.rightAnswers = rightAnswers;
     }
-//    RightAnswers rightAnswers = (RightAnswers) o;
-//
-//        if (rightOption != rightAnswers.rightOption) return false;
-
 }
