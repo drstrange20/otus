@@ -60,8 +60,9 @@ public class Exam {
 
         System.out.println("Добро пожаловать на экзамен, введите Ваше имя:");
         Scanner scanner = new Scanner(System.in);
-        String name = scanner.nextLine();
-        Student student = new Student(name);
+        Student student = new Student();
+        student.setName(scanner);
+
         System.out.println(student.getName() + ", Вам необходимо сдать тест, в котором 3 вопроса.\n");
         Exam result = Test.startTesting(test1, student, scanner);
         System.out.println("Количество верных ответов:" + result.getRightAnswersCount() + "\nКоличество неверных ответов:" + result.getWrongAnswersCount());
