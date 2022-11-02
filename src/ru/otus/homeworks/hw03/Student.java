@@ -5,7 +5,8 @@ import java.util.Scanner;
 
 class Student {
     private String name;
-    int answer;
+
+    private int answer;
 
     public void setName(Scanner scanner) {
         while (scanner.hasNextLine()) {
@@ -14,18 +15,31 @@ class Student {
                 break;
             } catch (InputMismatchException e) {
                 System.out.println("Введите корректное имя");
-                scanner.nextLine();
+                name = scanner.nextLine();
             }
         }
     }
 
-
-    public void setAnswer(int answer) {
-        this.answer = answer;
-    }
-
-
     public String getName() {
         return name;
+    }
+
+    public void setAnswer(Scanner scanner, Object[][] test1, int counter) {
+        while (true) {
+            try {
+                answer = Integer.parseInt(scanner.nextLine().trim());
+                if (answer < 1 || answer > test1[counter].length) {
+                    System.out.println("Выберите вариант ответа от 1 до " + test1[counter].length);
+                    setAnswer(scanner, test1, counter);
+                }
+                break;
+            } catch (NumberFormatException e) {
+                System.out.println("Выберите вариант ответа от 1 до " + test1[counter].length);
+            }
+        }
+    }
+
+    public int getAnswer() {
+        return answer;
     }
 }
