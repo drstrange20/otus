@@ -23,7 +23,7 @@ class Human {
 
     @Override
     public String toString() {
-        return name;
+        return this.name;
     }
 
     public void setName(String name) {

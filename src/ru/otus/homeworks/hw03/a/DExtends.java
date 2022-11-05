@@ -16,7 +16,7 @@ public class DExtends extends A{
         aD.publicPlay();
         aD.protectedPlay();
 
-        dExtendsA.defaultInt = 1;
+        dExtendsA.defaultInt = 1; // подкласс имеет все теже самые приоритеты в этом пакете
         dExtendsA.protectedInt = 1;
         dExtendsA.setPrivateInt(2);
         System.out.println(dExtendsA.getPrivateInt());
