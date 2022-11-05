@@ -9,6 +9,7 @@ public class Answers {
 
     @Override
     public String toString() {
-        return answers;
+
+        return this.answers;
     }
 }
