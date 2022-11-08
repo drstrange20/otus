@@ -1,4 +1,4 @@
-package ru.otus.homeworks.hw02;
+package ru.otus.homeworks.hw02.testsystem;
 import java.util.Scanner;
 
 public class Test {

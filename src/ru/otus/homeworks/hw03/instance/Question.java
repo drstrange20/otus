@@ -1,4 +1,4 @@
-package ru.otus.homeworks.hw03;
+package ru.otus.homeworks.hw03.instance;
 
 public class Question{
     private final String question;

@@ -1,14 +1,14 @@
-package ru.otus.homeworks.hw04;
+package ru.otus.homeworks.hw04.sorting;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
 
 public class Algorithm2 {
-    public static int bufferN;
     public static void main(String[] args) {
         ArrayList<Integer> firstArrayList = new ArrayList<>();
         ArrayList<Integer> secondArrayList = new ArrayList<>();
+
         for (int i = 0; i < 20001; i++) {
             int rand = (int)(Math.random() * 1000000);
             firstArrayList.add(rand);
@@ -30,15 +30,16 @@ public class Algorithm2 {
     public static void doSortWithChoice(ArrayList arrayList) {
         for (int i = 0; i < arrayList.size() - 1; i++) {
             int min = (int) arrayList.get(i);
+            int bufferNumber = 0;
             for (int j = i +1; j < arrayList.size(); j++) {
                 if (min > (int)arrayList.get(j)) {
                     min = (int)arrayList.get(j);
-                    bufferN = j;
+                    bufferNumber = j;
                 }
             }
-            int buffer = (int)arrayList.get(i);
+            int bufferValue = (int)arrayList.get(i);
             arrayList.set(i, min);
-            arrayList.set(bufferN, buffer);
+            arrayList.set(bufferNumber, bufferValue);
         }
     }
 }

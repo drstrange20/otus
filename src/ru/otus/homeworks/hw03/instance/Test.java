@@ -1,4 +1,4 @@
-package ru.otus.homeworks.hw03;
+package ru.otus.homeworks.hw03.instance;
 // другие методы сканнера для приема букв и чисел
 import java.util.Scanner;
 
