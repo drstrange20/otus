@@ -3,15 +3,14 @@ package ru.otus.homeworks.hw04.sorting;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
-import java.util.List;
 // Как получить ссылку на пулл реквест из идеи?
-
+// увеличить мапять jvm
 public class Algorithm {
     public static int x;
 
     public static void main(String[] args) {
         ArrayList<Integer> arrayList = new ArrayList<>();
-        for (int i = 0; i < 7; i++) {
+        for (int i = 0; i < 9; i++) {
             int rand = (int) (Math.random() * 100);
             arrayList.add(rand);
         }
