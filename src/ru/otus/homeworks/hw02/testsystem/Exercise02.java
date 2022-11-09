@@ -1,4 +1,4 @@
-package ru.otus.homeworks.hw02;
+package ru.otus.homeworks.hw02.testsystem;
 
 public class Exercise02 {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package ru.otus.homeworks.hw03.a;
+package ru.otus.homeworks.hw03.instance.a;
 
 public class DExtends extends A{
     public static void main(String[] args) {

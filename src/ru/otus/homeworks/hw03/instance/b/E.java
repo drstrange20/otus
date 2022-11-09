@@ -1,5 +1,6 @@
-package ru.otus.homeworks.hw03.b;
-import ru.otus.homeworks.hw03.a.A;
+package ru.otus.homeworks.hw03.instance.b;
+import ru.otus.homeworks.hw03.instance.a.A;
+
 public class E {
     public static void main(String[] args) {
 
