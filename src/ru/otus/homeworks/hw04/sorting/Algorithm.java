@@ -25,6 +25,7 @@ public class Algorithm {
     }
 
     public static ArrayList doStupidSorting(ArrayList<Integer> list) {
+        x++;
         Collections.shuffle(list);
 //        for (int i = 0; i < list.size(); i++) {
 //            int index = (int) (Math.random() * list.size());
@@ -33,11 +34,10 @@ public class Algorithm {
 //
 //            list.set(i, list.get(index));
 //            list.set(index, element);
-
+//
 //        }
         for (int j = 0; j < list.size() - 1; j++) {
             if (list.get(j) > list.get(j + 1)) {
-                x++;
                 doStupidSorting(list);
             }
         }
