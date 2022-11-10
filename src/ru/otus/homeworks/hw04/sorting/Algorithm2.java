@@ -9,7 +9,7 @@ public class Algorithm2 {
         ArrayList<Integer> firstArrayList = new ArrayList<>();
         ArrayList<Integer> secondArrayList = new ArrayList<>();
 
-        for (int i = 0; i < 20000; i++) {
+        for (int i = 0; i < 10000; i++) {
             int rand = (int)(Math.random() * 1000000);
             firstArrayList.add(rand);
             secondArrayList.add(rand);
@@ -32,7 +32,7 @@ public class Algorithm2 {
             int min = arrayList.get(i);
             int bufferNumber = 0;
             for (int j = i +1; j < arrayList.size(); j++) {
-                if (min > arrayList.get(j)) {
+                if (arrayList.get(i) > arrayList.get(j)) {
                     min = arrayList.get(j);
                     bufferNumber = j;
                 }
