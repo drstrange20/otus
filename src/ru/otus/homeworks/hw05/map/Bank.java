@@ -1,16 +1,15 @@
 package ru.otus.homeworks.hw05.map;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Scanner;
+import java.util.*;
+
+// вопрос System.out.println(hashMap.get("String" + client));
 
 public class Bank {
     public static void main(String[] args) {
-        Client client1 = new Client("Айнур", 28);
-        Client client2 = new Client("Айнур", 25);
+        Client client1 = new Client("Айнур Р", 28);
+        Client client2 = new Client("Айнур Б", 25);
         Client client3 = new Client("Иван", 46);
-        System.out.println(client1);
+
         ArrayList<Long> arrayList1 = new ArrayList<>();
         ArrayList<Long> arrayList2 = new ArrayList<>();
         ArrayList<Long> arrayList3 = new ArrayList<>();
@@ -28,6 +27,7 @@ public class Bank {
         hashMap.put(client3, arrayList3);
 
         getAccounts(hashMap);
+        findClient(hashMap);
     }
 
     static void getAccounts(HashMap<Client, ArrayList<Long>> hashMap) {
@@ -49,11 +49,14 @@ public class Bank {
         System.out.println("Поиск клиента по номеру счета\nВведите номер счета:");
         long age = scanner.nextLong();
 
-//        String name = Collections.
-//        for (int i = 0; i < hashMap.size(); i++) {
-//            if (hashMap.values().equals(age)) {
-//
-//            }
-//        }
+        ArrayList<Client> key = new ArrayList<>(hashMap.keySet());
+        ArrayList<ArrayList<Long>> valuesArrayList = new ArrayList<>(hashMap.values());
+        for (ArrayList<Long> accounts : valuesArrayList) {
+            for (int i = 0; i < accounts.size(); i++) {
+                if (accounts.get(i) == age) {
+                    System.out.println("Счет принадлежит клиенту: " + key.get(i));
+                }
+            }
+        }
     }
 }
