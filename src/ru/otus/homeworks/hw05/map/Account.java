@@ -1,13 +1,14 @@
 package ru.otus.homeworks.hw05.map;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 public class Account {
-    private final List<Integer> bankAccounts;
+    private List<Integer> bankAccounts;
 
-    public Account(List<Integer> bankAccounts) {
-        this.bankAccounts = bankAccounts;
+    Account(List<Integer> bankAccounts) {
+        bankAccounts = new ArrayList<>();
     }
 
     public void setBankAccounts(int accountNo) {

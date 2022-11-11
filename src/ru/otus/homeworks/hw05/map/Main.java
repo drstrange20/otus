@@ -24,15 +24,15 @@ import java.util.HashMap;
 public class Main {
     public static void main(String[] args) {
         Client client1 = new Client("Рахимьянов Айнур Радикович", 28);
-        Account account1 = new Account(new ArrayList<>());
+        Account account1 = new Account();
         account1.setBankAccounts(543);
         account1.setBankAccounts(654);
 
         Client client2 = new Client("Иванов Иван Иванович", 36);
-        Account account2 = new Account(new ArrayList<>());
+        Account account2 = new Account();
         account2.setBankAccounts(678);
 
-        HashMap<Client, Account> bank = new HashMap<>();
+        HashMap<Client, ArrayList> bank = new HashMap<>();
         bank.put(client1, account1);
         bank.put(client2, account2);
     }
