@@ -3,7 +3,7 @@ package ru.otus.homeworks.hw05.map;
 import java.util.Objects;
 
 public class Client {
-    final String fullName;
+    final public String fullName;
     private int age;
 
     public Client(String fullName, int age) {
@@ -27,5 +27,10 @@ public class Client {
         int result = fullName != null ? fullName.hashCode() : 0;
         result = 31 * result + age;
         return result;
+    }
+
+    @Override
+    public String toString() {
+        return fullName;
     }
 }
