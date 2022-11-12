@@ -1,4 +1,4 @@
-package ru.otus.homeworks.hw03.instance.a;
+package ru.otus.homeworks.hw03_instance.a;
 
 public class B {
     public static void main(String[] args) {

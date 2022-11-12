@@ -1,4 +1,4 @@
-package ru.otus.homeworks.hw03.instance;
+package ru.otus.homeworks.hw03_instance;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
