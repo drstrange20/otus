@@ -1,4 +1,4 @@
-package ru.otus.homeworks.hw02.testsystem;
+package ru.otus.homeworks.hw02_testsystem;
 
 import java.util.Arrays;
 

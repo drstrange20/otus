@@ -1,4 +1,4 @@
-package ru.otus.homeworks.hw02.testsystem;
+package ru.otus.homeworks.hw02_testsystem;
 
 public class Exercise01 {
     //Метов change - void, ничего не возвращает, таким образом переменная str остается неизменной в главном методе
