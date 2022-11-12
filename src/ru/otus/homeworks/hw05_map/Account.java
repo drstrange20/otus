@@ -1,4 +1,4 @@
-package ru.otus.homeworks.hw05.map;
+package ru.otus.homeworks.hw05_map;
 
 import java.util.ArrayList;
 

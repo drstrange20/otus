@@ -1,4 +1,4 @@
-package ru.otus.homeworks.hw04.sorting;
+package ru.otus.homeworks.hw04_sorting;
 
 import java.util.ArrayList;
 import java.util.Collections;
