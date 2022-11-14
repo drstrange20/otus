@@ -3,12 +3,20 @@ package ru.otus.homeworks.hw05_map;
 import java.util.Objects;
 
 public class Client {
-    final public String fullName;
-    private int age;
+    final private String fullName;
+    private final int birthDate;
 
-    public Client(String fullName, int age) {
+    public Client(String fullName, int birthDate) {
         this.fullName = fullName;
-        this.age = age;
+        this.birthDate = birthDate;
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public int getBirthDate() {
+        return birthDate;
     }
 
     @Override
@@ -18,19 +26,20 @@ public class Client {
 
         Client client = (Client) o;
 
-        if (age != client.age) return false;
+        if (birthDate != client.birthDate) return false;
         return Objects.equals(fullName, client.fullName);
     }
 
     @Override
     public int hashCode() {
         int result = fullName != null ? fullName.hashCode() : 0;
-        result = 31 * result + age;
+        result = 31 * result + birthDate;
         return result;
     }
 
     @Override
     public String toString() {
+
         return fullName;
     }
 }
