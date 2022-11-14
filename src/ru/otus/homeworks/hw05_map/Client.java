@@ -3,8 +3,8 @@ package ru.otus.homeworks.hw05_map;
 import java.util.Objects;
 
 public class Client {
-    final private String fullName;
-    private final int birthDate;
+    private final String fullName;
+    private int birthDate;
 
     public Client(String fullName, int birthDate) {
         this.fullName = fullName;
@@ -14,7 +14,6 @@ public class Client {
     public String getFullName() {
         return fullName;
     }
-
     public int getBirthDate() {
         return birthDate;
     }
