@@ -2,6 +2,8 @@ package ru.otus.homeworks.hw05_map;
 
 import java.util.*;
 
+// Вопрос тренажер № 3 ЧИСЛА ФИБОНАЧЧИ
+
 public class Bank {
     private static HashMap<Client, Account> hashMap;
 
@@ -16,6 +18,7 @@ public class Bank {
 
     public static void main(String[] args) {
         makeBankBase();
+
 
 //        Client client = new Client("Петров Иван Григорьевич", 2001);
 //        Account account = getAccounts(client);
