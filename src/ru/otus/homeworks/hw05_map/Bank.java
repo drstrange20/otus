@@ -1,33 +1,33 @@
 package ru.otus.homeworks.hw05_map;
 
 import java.util.*;
-
-// Вопрос тренажер № 3 ЧИСЛА ФИБОНАЧЧИ
-
+//В каждой ветке - одна домашка
+//Вернуть key, а не ново созданного клиента
+//Наименование не hashmap
+//статик hashmap?
 public class Bank {
     private static HashMap<Client, Account> hashMap;
 
     public Bank() {
+
         hashMap = new HashMap<>();
     }
 
     public void putToHashMap(Client client, Account account) {
+
         hashMap.put(client, account);
     }
-
 
     public static void main(String[] args) {
         makeBankBase();
 
-
-//        Client client = new Client("Петров Иван Григорьевич", 2001);
-//        Account account = getAccounts(client);
-//        if (account == null) {
-//            System.out.println("Счета по данному клиенту не найдены.");
-//        } else {
-//            System.out.println("Найдены следующие счета:\n" + account.getBankAccounts());
-//        }
-
+        Client client = new Client("Петров Иван Григорьевич", 2001);
+        Account account = getAccounts(client);
+        if (account == null) {
+            System.out.println("Счета по данному клиенту не найдены.");
+        } else {
+            System.out.println("Найдены следующие счета:\n" + account.getBankAccounts());
+        }
 
         Account testAccount = new Account();
         testAccount.addAccount(124);
@@ -35,8 +35,7 @@ public class Bank {
         if (testClient.fullName() == null) {
             System.out.println("Клиент по данному счету не найден.");
         } else {
-            System.out.println("Клиент найден!\nФИО: " + testClient.fullName()
-                    + ", дата рождения: " + testClient.birthDate());
+            System.out.println("Клиент найден!\nФИО: " + testClient.fullName() + ", дата рождения: " + testClient.birthDate());
         }
     }
 
@@ -63,6 +62,7 @@ public class Bank {
         }
         return new Client(name, birthDate);
     }
+
 
     private static void makeBankBase() {
         Client client1 = new Client("Рахимьянов Айнур Радикович", 1994);
