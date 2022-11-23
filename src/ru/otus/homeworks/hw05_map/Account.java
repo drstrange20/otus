@@ -3,18 +3,19 @@ package ru.otus.homeworks.hw05_map;
 import java.util.ArrayList;
 
 public class Account {
-    private final ArrayList<Integer> bankAccounts;
+    private final ArrayList<Integer> BANKACCOUNTS;
 
     public Account() {
 
-        bankAccounts = new ArrayList<>();
+        BANKACCOUNTS = new ArrayList<>();
     }
     public void addAccount (int integer) {
-        bankAccounts.add(integer);
+        BANKACCOUNTS.add(integer);
     }
 
     public ArrayList<Integer> getBankAccounts() {
 
-        return bankAccounts;
+        return BANKACCOUNTS;
     }
+
 }
