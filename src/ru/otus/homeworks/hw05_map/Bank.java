@@ -4,7 +4,7 @@ import java.util.*;
 //В каждой ветке - одна домашка
 //Вернуть key, а не ново созданного клиента
 //Наименование не hashmap
-//статик hashmap?
+//статик hashmap??
 public class Bank {
     private static HashMap<Client, Account> hashMap;
 
