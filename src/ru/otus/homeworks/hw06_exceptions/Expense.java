@@ -1,4 +1,4 @@
-package ru.mysite.otus.hw05_exceptions;
+package ru.otus.homeworks.hw06_exceptions;
 
 public class Expense {
     private int expenses;

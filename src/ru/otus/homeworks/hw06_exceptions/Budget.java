@@ -1,4 +1,4 @@
-package ru.mysite.otus.hw05_exceptions;
+package ru.otus.homeworks.hw06_exceptions;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -98,9 +98,9 @@ public class Budget implements Runnable {
     public void distributeIncome(Budget budget, Income income) {
         for (int i = 0; i < budget.accountList.size(); i++) {
             int cash = returnCashValue(budget, i);
-            cash += income.getSalary() * budget.distributionPercentageList.get(i);
+            cash += income.getSalary() * budget.distributionPercentageList.get(i) / 100;
             Account account = budget.accountList.get(i);
-            account.setCash(cash/100);
+            account.setCash(cash);
             budget.accountList.set(i, account);
         }
     }
