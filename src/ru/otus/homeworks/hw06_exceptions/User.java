@@ -20,10 +20,10 @@ public class User {
         try {
             name = scanner.next("[А-Яа-я]+");
             if (name == null) {
-                throw new Exception("Вы ввели некорректное имя");
+                throw new Exception("Произошла ошибка");
             }
         } catch (Exception e) {
-            throw new Exception("Приложение не может быть запущено");
+            throw e;
         }
         return name;
     }

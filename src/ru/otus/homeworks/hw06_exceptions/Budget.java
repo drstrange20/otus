@@ -78,8 +78,8 @@ public class Budget implements Runnable {
             String goal = scanStr.nextLine();
             addNewGoals(budget, goal);
             System.out.println("Сколько денег уже отложено?");
-            int cash = scanInt.nextInt();
-            addNewAccounts(new Account(cash), budget);
+            int accountBalance = scanInt.nextInt();
+            addNewAccounts(new Account(accountBalance), budget);
             System.out.println("Какой процент от дохода перечислять на этот счет?");
             int percent = scanInt.nextInt();
             addPercentage(budget, percent);
@@ -91,7 +91,7 @@ public class Budget implements Runnable {
             System.out.println("Введите команду: \"Баланс\", \"зп\", \"Расход\", \"Траты\", или \"Выход\":");
             return command = scanStr.nextLine();
         } catch (Exception e) {
-            return doCommand(command);
+            return "баланс";
         }
     }
 
