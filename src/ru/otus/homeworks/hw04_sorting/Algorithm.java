@@ -3,8 +3,6 @@ package ru.otus.homeworks.hw04_sorting;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
-// Как получить ссылку на пулл реквест из идеи?
-// увеличить мапять jvm
 public class Algorithm {
     public static int x;
 
@@ -17,14 +15,14 @@ public class Algorithm {
         System.out.println(arrayList);
 
         int start = (int) new Date().getTime();
-        ArrayList arrayList1 = doStupidSorting(arrayList);
+        ArrayList<Integer> arrayList1 = doStupidSorting(arrayList);
         int end = (int) new Date().getTime();
         System.out.println("Количество итераций: " + x++);
         System.out.println(arrayList1 + "\ndelta: " + (end - start) + " ms");
 
     }
 
-    public static ArrayList doStupidSorting(ArrayList<Integer> list) {
+    public static ArrayList<Integer> doStupidSorting(ArrayList<Integer> list) {
         x++;
         Collections.shuffle(list);
 //        for (int i = 0; i < list.size(); i++) {
