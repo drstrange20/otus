@@ -1,5 +1,7 @@
 package ru.otus.java.hw07_game_of_dice.assertions;
 
+import ru.otus.java.hw07_game_of_dice.game1.app.service.Player;
+
 public class Assertions {
     public static void assertEqualsLessOne(int expected, int actual) {
         if (actual < expected) {
@@ -13,11 +15,11 @@ public class Assertions {
         }
     }
 
-//    public static void assertEquals(long expected, long actual) {
-//        if (expected != actual) {
-//            throw new AssertionError(String.format("Expected %d = %d", expected, actual));
-//        }
-//    }
+    public static void assertEquals(Player actual, Player expected) {
+        if (!actual.getName().equals(expected.getName())) {
+            throw new AssertionError("Неверно определен победитель " + expected.getName() + " " + actual.getName());
+        }
+    }
 //
 //    public static void assertEquals(String expected, String actual) {
 //        if (!expected.equals(actual)) {

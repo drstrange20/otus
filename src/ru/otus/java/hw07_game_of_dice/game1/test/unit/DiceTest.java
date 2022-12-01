@@ -4,7 +4,7 @@ import ru.otus.java.hw07_game_of_dice.assertions.Assertions;
 import ru.otus.java.hw07_game_of_dice.game1.app.service.DiceImpl;
 
 public class DiceTest {
-    public void checkTheDice() {
+    public void DiceTest() {
         String scenario = "Тест на проверку значений кубика";
         try {
             int actual = new DiceImpl().roll();

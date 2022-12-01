@@ -1,5 +1,8 @@
-package ru.otus.java.hw07_game_of_dice.game2.test;
+package ru.otus.java.hw07_game_of_dice.test2;
 
+
+import ru.otus.java.hw07_game_of_dice.game1.test.unit.DiceTest;
+import ru.otus.java.hw07_game_of_dice.test2.unit.GameTest;
 
 public class AllTests {
     /*
@@ -13,7 +16,8 @@ public class AllTests {
         Информацию о пройденном тесте предлагается выводить в System.out, а об упавшем в System.err
      */
     public static void main(String[] args) {
-
+        new DiceTest().DiceTest();
+        new GameTest().testTheDice();
     }
     
 }
