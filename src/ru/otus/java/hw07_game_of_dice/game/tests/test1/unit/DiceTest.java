@@ -1,7 +1,7 @@
-package ru.otus.java.hw07_game_of_dice.game1.test.unit;
+package ru.otus.java.hw07_game_of_dice.game.tests.test1.unit;
 
 import ru.otus.java.hw07_game_of_dice.assertions.Assertions;
-import ru.otus.java.hw07_game_of_dice.game1.app.service.DiceImpl;
+import ru.otus.java.hw07_game_of_dice.game.app.service.DiceImpl;
 
 public class DiceTest {
     public void DiceTest() {

@@ -1,6 +1,6 @@
-package ru.otus.java.hw07_game_of_dice.test2.fake;
+package ru.otus.java.hw07_game_of_dice.game.tests.test2.fake;
 
-import ru.otus.java.hw07_game_of_dice.game1.app.service.Dice;
+import ru.otus.java.hw07_game_of_dice.game.app.service.Dice;
 
 public class DiceImplStub implements Dice {
     private boolean isFirstInputCall = true;

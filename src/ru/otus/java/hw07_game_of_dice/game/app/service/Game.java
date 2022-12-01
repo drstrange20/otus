@@ -1,4 +1,4 @@
-package ru.otus.java.hw07_game_of_dice.game1.app.service;
+package ru.otus.java.hw07_game_of_dice.game.app.service;
 
 public class Game {
 

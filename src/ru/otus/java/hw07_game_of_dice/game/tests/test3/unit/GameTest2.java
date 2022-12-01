@@ -1,10 +1,9 @@
-package ru.otus.java.hw07_game_of_dice.test2.unit;
+package ru.otus.java.hw07_game_of_dice.game.tests.test3.unit;
 
-import ru.otus.java.hw07_game_of_dice.game1.app.service.*;
-import ru.otus.java.hw07_game_of_dice.test2.fake.DiceImplStub;
-import ru.otus.java.hw07_game_of_dice.test2.fake.GameWinnerConsolePrinterSpy;
+import ru.otus.java.hw07_game_of_dice.game.app.service.*;
+import ru.otus.java.hw07_game_of_dice.game.tests.test3.fake.*;
 
-public class GameTest {
+public class GameTest2 {
     public void testTheDice() {
         String scenario = "Тест на проверку корректного определения победителя";
         try {

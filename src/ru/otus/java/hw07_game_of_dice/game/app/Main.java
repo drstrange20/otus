@@ -1,7 +1,7 @@
-package ru.otus.java.hw07_game_of_dice.game1.app;
+package ru.otus.java.hw07_game_of_dice.game.app;
 
 
-import ru.otus.java.hw07_game_of_dice.game1.app.service.*;
+import ru.otus.java.hw07_game_of_dice.game.app.service.*;
 
 public class Main {
 
