@@ -20,32 +20,10 @@ public class Assertions {
             throw new AssertionError("Неверно определен победитель " + expected.getName() + " = " + actual.getName());
         }
     }
-//
-//    public static void assertEquals(String expected, String actual) {
-//        if (!expected.equals(actual)) {
-//            throw new AssertionError(String.format("Expected \"%s\" = \"%s\"", expected, actual));
-//        }
-//    }
-//
-//    public static void assertEquals(Class<? extends Throwable> expected, Class<? extends Throwable> actual) {
-//        if (!expected.equals(actual)) {
-//            throw new AssertionError(String.format("Expected \"%s\" = \"%s\"", expected, actual));
-//        }
-//    }
-//
-//    public static void assertThrows(Class<? extends Throwable> expected, Runnable code) {
-//        Throwable actual = null;
-//        try {
-//            code.run();
-//        } catch (Throwable e) {
-//            actual = e;
-//        }
-//        if (actual == null) {
-//            throw new AssertionError("Given code does not throw any exception");
-//        }
-//
-//        if (!actual.getClass().equals(expected)) {
-//            throw new AssertionError(String.format("Expected \"%s\" = \"%s\"", expected.getSimpleName(), actual.getClass().getSimpleName()));
-//        }
-//    }
+
+    public static void assertEquals1(Player actual, Player expected) {
+        if (!actual.getName().equals(expected.getName())) {
+            throw new AssertionError("Неверно определен победитель " + expected.getName() + " = " + actual.getName());
+        }
+    }
 }
