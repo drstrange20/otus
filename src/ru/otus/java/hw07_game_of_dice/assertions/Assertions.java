@@ -16,14 +16,8 @@ public class Assertions {
     }
 
     public static void assertEquals(Player actual, Player expected) {
-        if (!actual.getName().equals(expected.getName())) {
-            throw new AssertionError("Неверно определен победитель " + expected.getName() + " = " + actual.getName());
-        }
-    }
-
-    public static void assertEquals1(Player actual, Player expected) {
-        if (!actual.getName().equals(expected.getName())) {
-            throw new AssertionError("Неверно определен победитель " + expected.getName() + " = " + actual.getName());
+        if (!(actual == expected)) {
+            throw new AssertionError("Неверно определен победитель " + expected + " = " + actual);
         }
     }
 }
