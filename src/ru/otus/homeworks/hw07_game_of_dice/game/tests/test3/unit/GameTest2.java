@@ -7,8 +7,6 @@ import ru.otus.homeworks.hw07_game_of_dice.game.app.service.GameWinnerPrinter;
 import ru.otus.homeworks.hw07_game_of_dice.game.app.service.Player;
 import ru.otus.homeworks.hw07_game_of_dice.game.tests.test3.fake.DiceImplStub;
 import ru.otus.homeworks.hw07_game_of_dice.game.tests.test3.fake.GameWinnerConsolePrinterSpy;
-import ru.otus.java.hw07_game_of_dice.game.app.service.*;
-import ru.otus.java.hw07_game_of_dice.game.tests.test3.fake.*;
 
 public class GameTest2 {
     public void gamePlayersTest2() {
