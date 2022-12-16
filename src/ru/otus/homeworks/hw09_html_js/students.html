@@ -1,0 +1,155 @@
+<!DOCTYPE>
+<meta charset="UTF-8">
+<html>
+<head>
+    <title>Домашняя работа</title>
+    <style>
+        .students-tab {
+            border: 1px solid steelblue;
+            border-collapse: collapse;
+            margin-bottom: 50px;
+        }
+
+        .students-tab tr td {
+            border: 1px solid steelblue;
+        }
+
+        .table2 {
+            border: 1px solid steelblue;
+            border-collapse: collapse;
+        }
+
+        .table3 {
+            height: 150px;
+            width: 500px;
+            border: 1px solid steelblue;
+            border-collapse: collapse;
+        }
+
+        .table2 tr td {
+            border: 1px solid steelblue;
+        }
+
+        .students-tab-col1 {
+            width: 250px;
+        }
+
+        input {
+            background: transparent;
+            border: none;
+            outline: none;
+            width: 250px;
+        }
+
+        .students-tab-col2 {
+            width: 150px;
+        }
+
+        select {
+            outline: none;
+            border: none;
+            width: 250px;
+        }
+
+    </style>
+
+    <script>
+        "use strict"
+
+        function addStudent() {
+            const studentsTab = document.getElementById("studentsTab");
+            let studentName = document.getElementById("studentName").value;
+
+            const newRow = studentsTab.insertRow(studentsTab.rows.length);
+
+            studentName += "(new)";
+
+            const newCell = newRow.insertCell(-1);
+            newCell.appendChild(document.createTextNode(studentName));
+        }
+    </script>
+
+    <script>
+        function findTheAverageAge () {
+
+        }
+    </script>
+
+</head>
+
+<body>
+
+<h2>
+    Форма добавления информации о студенте
+</h2>
+
+<table class="table3">
+    <tr>
+        <td>
+            <table class="table2">
+                <tr>
+                    <td width="250px" height="25px">Имя студента:</td>
+                    <td width="250px" height="25px"><input type="text" placeholder="Введите Имя"></td>
+                </tr>
+                <tr>
+                    <td width="250px" height="25px">Дата рождения:</td>
+                    <td width="250px" height="25px">
+                        <input type="date">
+                    </td>
+                </tr>
+                <tr>
+                    <td width="250px" height="25px">Пол:</td>
+                    <td width="250px" height="25px">
+                        <select>
+                            <option>Женщина</option>
+                            <option>Мужчина</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+                <br>
+                <button onclick="addStudent()">Добавить</button>
+        </td>
+    </tr>
+</table>
+
+<h3>Таблица студентов</h3>
+<table class="students-tab" id="studentsTab">
+    <thead>
+    <tr>
+        <td align="center" class="students-tab-col1">Имя студента</td>
+        <td align="center" class="students-tab-col2">Пол</td>
+        <td align="center" class="students-tab-col2">Дата рождения</td>
+        <td align="center" class="students-tab-col2">Возраст</td>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+        <td>Иван Ограномович Штейн</td>
+        <td>мужчина</td>
+        <td>20.06.1994</td>
+        <td>28</td>
+    </tr>
+    <tr>
+        <td>Гертруда Анатольевна Иванова</td>
+        <td>женщина</td>
+        <td>01.01.1984</td>
+        <td>38</td>
+    </tr>
+    <tr>
+        <td>Воланд Игоревич Муха</td>
+        <td>мужчина</td>
+        <td>02.05.2000</td>
+        <td>22</td>
+    </tr>
+    <tr>
+        <td colspan="4" height="20px"></td>
+    </tr>
+    <tr>
+        <td colspan="3">Средний возраст студентов</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
