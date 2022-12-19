@@ -64,22 +64,32 @@
 
         function addStudent() {
             const studentsTab2 = document.getElementById("studentsTab2");
-            let studentName = document.getElementById("studentName").value;
-            let birthDate = document.getElementById("birthDate").value;
 
-            const newRow = studentsTab2.insertRow(studentsTab2.rows.length);
+            const studentName = document.getElementById("studentName").value;
+            const sex = document.getElementById("sex").value;
+            const birthDate = document.getElementById("birthDate").value;
+
+            const newRow = studentsTab2.insertRow(1);
 
             const newCell = newRow.insertCell(-1);
+            const newCell1 = newRow.insertCell(-1);
+            const newCell2 = newRow.insertCell(-1);
+            const newCell3 = newRow.insertCell(-1);
+
             newCell.appendChild(document.createTextNode(studentName));
-            newCell.appendChild(document.createTextNode(birthDate));
+            newCell1.appendChild(document.createTextNode(sex));
+            newCell2.appendChild(document.createTextNode(birthDate));
+            newCell3.appendChild(document.createTextNode(Math.floor((new Date() - new Date(birthDate)) / 1000 / 60 / 60 / 24 / 365)));
+
+            let ages = 0
+            for(let i = 1; i <= studentsTab2.rows.length - 3; i++) {
+                ages += Number(document.getElementById('studentsTab2').rows[i].cells[3].textContent)
+            }
+
+            document.getElementById("ageResult").innerHTML = Math.round(ages / (studentsTab2.rows.length - 3));
         }
     </script>
 
-    <script>
-        function findTheAverageAge () {
-
-        }
-    </script>
 
 </head>
 
@@ -95,20 +105,20 @@
             <table class="table2" id="studentsTab">
                 <tr>
                     <td>Имя студента:</td>
-                    <td><input type="text" placeholder="Введите Имя" id="studentName"></td>
+                    <td><input type="text" value="Рахимьянов Айнур Радикович" id="studentName"></td>
                 </tr>
                 <tr>
                     <td>Дата рождения:</td>
                     <td>
-                        <input type="date" id="birthDate">
+                        <input type="date" id="birthDate" value="1994-06-20">
                     </td>
                 </tr>
                 <tr>
                     <td>Пол:</td>
                     <td>
-                        <select>
-                            <option>Женщина</option>
-                            <option>Мужчина</option>
+                        <select id="sex">
+                            <option>мужчина</option>
+                            <option>женщина</option>
                         </select>
                     </td>
                 </tr>
@@ -132,22 +142,22 @@
 
     <tbody>
     <tr>
-        <td>Иван Ограномович Штейн</td>
+        <td>Бондарев Федор Олегович</td>
         <td>мужчина</td>
-        <td>20.06.1994</td>
-        <td>28</td>
+        <td>1990-12-26</td>
+        <td id="age1">31</td>
     </tr>
     <tr>
         <td>Гертруда Анатольевна Иванова</td>
         <td>женщина</td>
-        <td>01.01.1984</td>
-        <td>38</td>
+        <td>1984-01-01</td>
+        <td id="age2">38</td>
     </tr>
     <tr>
         <td>Воланд Игоревич Муха</td>
         <td>мужчина</td>
-        <td>02.05.2000</td>
-        <td>22</td>
+        <td>2000-05-02</td>
+        <td id="age3">22</td>
     </tr>
     </tbody>
     <tr>
@@ -155,8 +165,9 @@
     </tr>
     <tr>
         <td colspan="3">Средний возраст студентов</td>
-        <td></td>
+        <td id="ageResult">30</td>
     </tr>
 </table>
+
 </body>
 </html>
