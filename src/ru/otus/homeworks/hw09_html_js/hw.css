@@ -1,0 +1,53 @@
+    #studentsTab2 {
+        border: 1px solid steelblue;
+        border-collapse: collapse;
+    }
+
+    #studentsTab2 tr td {
+        border: 1px solid steelblue;
+    }
+
+    .students-tab-col1 {
+        text-align: center;
+        width: 250px;
+    }
+
+    .students-tab-col2 {
+        text-align: center;
+        width: 150px;
+    }
+
+    .table2 {
+        border: 1px solid steelblue;
+        border-collapse: collapse;
+    }
+
+    .table2 tr td {
+        width: 250px;
+        height: 25px;
+        border: 1px solid steelblue;
+    }
+
+    .table3 {
+        height: 150px;
+        width: 500px;
+        border: 1px solid steelblue;
+        border-collapse: collapse;
+    }
+
+    .table3 tr td {
+        border: 1px solid steelblue;
+    }
+
+    input {
+        background: transparent;
+        border: none;
+        outline: none;
+        width: 250px;
+    }
+
+    select {
+        outline: none;
+        border: none;
+        width: 250px;
+    }
