@@ -1,0 +1,119 @@
+<!DOCTYPE>
+<meta charset="UTF-8">
+<html>
+<head>
+    <title>Домашняя работа</title>
+    <link rel="stylesheet" href="hw.css">
+
+    <script>
+        "use strict"
+
+        function addStudent() {
+            const studentsTab2 = document.getElementById("studentsTab2");
+
+            const studentName = document.getElementById("studentName").value;
+            const sex = document.getElementById("sex").value;
+            const birthDate = document.getElementById("birthDate").value;
+
+            const newRow = studentsTab2.insertRow(1);
+
+            const newCell = newRow.insertCell(-1);
+            const newCell1 = newRow.insertCell(-1);
+            const newCell2 = newRow.insertCell(-1);
+            const newCell3 = newRow.insertCell(-1);
+
+            newCell.appendChild(document.createTextNode(studentName));
+            newCell1.appendChild(document.createTextNode(sex));
+            newCell2.appendChild(document.createTextNode(birthDate));
+            newCell3.appendChild(document.createTextNode(Math.floor((new Date() - new Date(birthDate)) / 1000 / 60 / 60 / 24 / 365)));
+
+            let ages = 0
+            for(let i = 1; i <= studentsTab2.rows.length - 3; i++) {
+                ages += Number(document.getElementById('studentsTab2').rows[i].cells[3].textContent)
+            }
+
+            document.getElementById("ageResult").innerHTML = Math.round(ages / (studentsTab2.rows.length - 3));
+        }
+    </script>
+
+
+</head>
+
+<body>
+
+<h2>
+    Форма добавления информации о студенте
+</h2>
+
+<table class="table3">
+    <tr>
+        <td>
+            <table class="table2" id="studentsTab">
+                <tr>
+                    <td>Имя студента:</td>
+                    <td><input type="text" value="Рахимьянов Айнур Радикович" id="studentName"></td>
+                </tr>
+                <tr>
+                    <td>Дата рождения:</td>
+                    <td>
+                        <input type="date" id="birthDate" value="1994-06-20">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Пол:</td>
+                    <td>
+                        <select id="sex">
+                            <option>мужчина</option>
+                            <option>женщина</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <button onclick="addStudent()">Добавить</button>
+        </td>
+    </tr>
+</table>
+
+<h2>Таблица студентов</h2>
+<table id="studentsTab2">
+    <thead>
+    <tr>
+        <td class="students-tab-col1">Имя студента</td>
+        <td class="students-tab-col2">Пол</td>
+        <td class="students-tab-col2">Дата рождения</td>
+        <td class="students-tab-col2">Возраст</td>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+        <td>Бондарев Федор Олегович</td>
+        <td>мужчина</td>
+        <td>1990-12-26</td>
+        <td>31</td>
+    </tr>
+    <tr>
+        <td>Гертруда Анатольевна Иванова</td>
+        <td>женщина</td>
+        <td>1984-01-01</td>
+        <td>38</td>
+    </tr>
+    <tr>
+        <td>Воланд Игоревич Муха</td>
+        <td>мужчина</td>
+        <td>2000-05-02</td>
+        <td>22</td>
+    </tr>
+    </tbody>
+    <tr>
+        <td colspan="4" height="20px"></td>
+    </tr>
+    <tr>
+        <td colspan="3">Средний возраст студентов</td>
+        <td id="ageResult">30</td>
+    </tr>
+</table>
+
+</body>
+</html>
